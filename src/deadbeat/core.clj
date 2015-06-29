@@ -1,11 +1,10 @@
 (ns deadbeat.core
   (:require
-    [clj-http.client :as client]
-    [deadbeat.slack.api :as api]
     [deadbeat.slack.rtm :as rtm]
+    [environ.core :as environ]
     [clojure.core.async :as a :refer [go chan <! >!]]))
 
-(def hardcode-token "...")
+(def hardcode-token (environ/env :api-token))
 
 (defn print-message [{:keys [user text]}]
   (println (:name user) ": " text))

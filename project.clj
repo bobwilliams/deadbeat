@@ -9,4 +9,5 @@
                  [aleph "0.4.0-beta3"]
                  [clj-http "1.1.0"]
                  [cheshire "5.4.0"]
-                 [overtone/at-at "1.2.0"]])
+                 [overtone/at-at "1.2.0"]
+                 [environ "1.0.0"]])
